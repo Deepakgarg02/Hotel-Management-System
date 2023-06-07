@@ -3049,3 +3049,74 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 10:17:45.292
 !MESSAGE Started Boot LS process
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2023-06-07 10:39:22.807
+!MESSAGE No digest algorithm is available to verify download of org.eclipse.update.feature,org.projectlombok.feature,1.18.28.
+
+!ENTRY org.eclipse.equinox.p2.artifact.repository 2 0 2023-06-07 10:39:22.807
+!MESSAGE No digest algorithm is available to verify download of osgi.bundle,org.projectlombok.agent,1.18.28.
+!SESSION 2023-06-07 10:40:16.217 -----------------------------------------------
+eclipse.buildId=4.18.1.202305021758
+java.version=17.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -product org.springframework.boot.ide.branding.sts4 -data file:/C:/Users/Asus/Desktop/Hotel-Management-System/ -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-07 10:40:26.397
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2023-06-07 10:40:31.088
+!MESSAGE Logback config file: C:\Users\Asus\Desktop\Hotel-Management-System\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.1.100.20230106-1511.xml
+
+!ENTRY org.eclipse.jface 2 0 2023-06-07 10:40:35.929
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2023-06-07 10:40:35.930
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolinworkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 10:40:46.605
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-07 10:40:46.638
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 8352
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-06-07 10:40:54.384
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Asus'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 10:40:54.767
+!MESSAGE Boot project ADDED: Guest-Microservice
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 10:40:54.769
+!MESSAGE Starting Boot LS...
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 10:40:54.773
+!MESSAGE Started Boot LS process
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 10:41:29.324
+!MESSAGE Classpath changed for project: Staff-Microservices
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 10:41:31.157
+!MESSAGE Classpath changed for project: Staff-Microservices
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-07 10:41:31.158
+!MESSAGE Boot project ADDED: Staff-Microservices
