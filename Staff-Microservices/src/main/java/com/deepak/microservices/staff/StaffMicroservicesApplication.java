@@ -1,4 +1,4 @@
-package com.deepak.microservices.staff.StaffMicroservices;
+package com.deepak.microservices.staff;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
