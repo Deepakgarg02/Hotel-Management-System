@@ -62,6 +62,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Asus\Desktop\Hotel-Management-System\Staff-Microservices"/>
 			<item value="C:\Users\Asus\Desktop\Hotel-Management-System\Guest-Microservice"/>
 		</list>
 		<list key="projectNameTemplate">
