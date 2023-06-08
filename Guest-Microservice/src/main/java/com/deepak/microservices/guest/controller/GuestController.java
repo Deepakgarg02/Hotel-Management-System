@@ -31,10 +31,9 @@ public class GuestController {
 	@PostMapping("/add")
 	public String addGuest(@RequestBody Guest guest) {
 		try {
-		guestServiceImpl.addGuest(guest);
-		return "Guest Added with guestId " + guest.getGuestId();
-		}
-		catch(Exception e) {
+			guestServiceImpl.addGuest(guest);
+			return "Guest Added with guestId " + guest.getGuestId();
+		} catch (Exception e) {
 			return "Use Proper Input";
 		}
 	}
