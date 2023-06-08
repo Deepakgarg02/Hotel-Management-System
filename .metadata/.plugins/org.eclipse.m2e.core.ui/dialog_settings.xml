@@ -62,6 +62,9 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Asus\Desktop\Hotel-Management-System\ServiceRegistry"/>
+			<item value="C:\Users\Asus\Downloads\Drive-In-Cinema\ServiceRegistry"/>
+			<item value="C:\Users\Asus\Desktop\Hotel-Management-System\Discovery-Server"/>
 			<item value="C:\Users\Asus\Desktop\Hotel-Management-System\Inventory-Microservices"/>
 			<item value="C:\Users\Asus\Desktop\Hotel-Management-System\Room-Microservices"/>
 			<item value="C:\Users\Asus\Desktop\Hotel-Management-System\Staff-Microservices"/>

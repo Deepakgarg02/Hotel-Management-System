@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.GeneratorType;
@@ -29,6 +30,7 @@ public class Guest {
 	private long guestId;
 
 	@NotNull(message = "Guest Contact cannot be null")
+	@Positive
 	private long guestContact;
 
 	@NotNull(message = "Guest Name cannot be null")
