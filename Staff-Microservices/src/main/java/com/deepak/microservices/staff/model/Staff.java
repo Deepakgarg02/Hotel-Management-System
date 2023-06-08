@@ -13,6 +13,11 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Entity
 public class Staff {
 
@@ -35,68 +40,5 @@ public class Staff {
 	@NotNull(message = "Staff MailId cannnot be Null")
 	@Size(min = 12, message = "Staff MailId should be minimum of 12 digits")
 	private String staffEmail;
-
-	public Staff(long staffId, String staffName, String staffAddress, String staffSalary, int staffAge,
-			String staffEmail) {
-		super();
-		this.staffId = staffId;
-		this.staffName = staffName;
-		this.staffAddress = staffAddress;
-		this.staffSalary = staffSalary;
-		this.staffAge = staffAge;
-		this.staffEmail = staffEmail;
-	}
-
-	public Staff() {
-
-	}
-
-	public long getStaffId() {
-		return staffId;
-	}
-
-	public void setStaffId(long staffId) {
-		this.staffId = staffId;
-	}
-
-	public String getStaffName() {
-		return staffName;
-	}
-
-	public void setStaffName(String staffName) {
-		this.staffName = staffName;
-	}
-
-	public String getStaffAddress() {
-		return staffAddress;
-	}
-
-	public void setStaffAddress(String staffAddress) {
-		this.staffAddress = staffAddress;
-	}
-
-	public String getStaffSalary() {
-		return staffSalary;
-	}
-
-	public void setStaffSalary(String staffSalary) {
-		this.staffSalary = staffSalary;
-	}
-
-	public int getStaffAge() {
-		return staffAge;
-	}
-
-	public void setStaffAge(int staffAge) {
-		this.staffAge = staffAge;
-	}
-
-	public String getStaffEmail() {
-		return staffEmail;
-	}
-
-	public void setStaffEmail(String staffEmail) {
-		this.staffEmail = staffEmail;
-	}
 
 }
