@@ -1,2 +1,4 @@
 STS4BootMarkerIndicationColor=56,84,26
 eclipse.preferences.version=1
+net.sourceforge.pmd.eclipse.plugin.annotation.prio1.overviewruler=false
+net.sourceforge.pmd.eclipse.plugin.annotation.prio1.verticalruler=false
