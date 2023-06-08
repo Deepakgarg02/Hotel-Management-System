@@ -9,19 +9,27 @@ import javax.validation.constraints.Size;
 
 import org.hibernate.annotations.GeneratorType;
 
-//import org.springframework.data.annotation.Id;
-//import org.springframework.data.mongodb.core.mapping.Document;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Entity
 public class Guest {
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@NotNull(message = "Guest ID cannot be null")
- 	private long guestId;
+	private long guestId;
 
 	@NotNull(message = "Guest Contact cannot be null")
- 	private long guestContact;
+	private long guestContact;
 
 	@NotNull(message = "Guest Name cannot be null")
 	@Size(min = 3, message = "Guest Name should be a minimum of 3 characters")
@@ -38,68 +46,5 @@ public class Guest {
 	@NotNull(message = "Guest Address cannot be null")
 	@Size(min = 5, message = "Guest Address should be a minimum of 5 characters")
 	private String guestAddress;
-
-	// Constructors
-	public Guest() {
-	}
-
-	public Guest(long guestId, String guestName, long guestContact, String guestEmail, String guestGender,
-			String guestAddress) {
-		this.guestId = guestId;
-		this.guestName = guestName;
-		this.guestContact = guestContact;
-		this.guestEmail = guestEmail;
-		this.guestGender = guestGender;
-		this.guestAddress = guestAddress;
-	}
-
-	// Getters and Setters
-	public Long getGuestId() {
-		return guestId;
-	}
-
-	public void setGuestId(Long guestId) {
-		this.guestId = guestId;
-	}
-
-	public String getGuestName() {
-		return guestName;
-	}
-
-	public void setGuestName(String guestName) {
-		this.guestName = guestName;
-	}
-
-	public Long getGuestContact() {
-		return guestContact;
-	}
-
-	public void setGuestContact(Long guestContact) {
-		this.guestContact = guestContact;
-	}
-
-	public String getGuestEmail() {
-		return guestEmail;
-	}
-
-	public void setGuestEmail(String guestEmail) {
-		this.guestEmail = guestEmail;
-	}
-
-	public String getGuestGender() {
-		return guestGender;
-	}
-
-	public void setGuestGender(String guestGender) {
-		this.guestGender = guestGender;
-	}
-
-	public String getGuestAddress() {
-		return guestAddress;
-	}
-
-	public void setGuestAddress(String guestAddress) {
-		this.guestAddress = guestAddress;
-	}
 
 }
