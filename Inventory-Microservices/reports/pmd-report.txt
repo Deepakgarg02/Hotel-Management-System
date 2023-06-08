@@ -1,0 +1,48 @@
+src/main/java/com/deepak/microservices/inventory/InventoryMicroservicesApplication.java:7:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/deepak/microservices/inventory/InventoryMicroservicesApplication.java:7:	UseUtilityClass:	UseUtilityClass: This utility class has a non-private constructor
+src/main/java/com/deepak/microservices/inventory/InventoryMicroservicesApplication.java:9:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/deepak/microservices/inventory/InventoryMicroservicesApplication.java:9:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'args' is not assigned and could be declared final
+src/main/java/com/deepak/microservices/inventory/configure/InventorySwagger.java:14:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/com/deepak/microservices/inventory/configure/InventorySwagger.java:14:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/deepak/microservices/inventory/configure/InventorySwagger.java:17:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:21:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:21:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:24:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:24:	LongVariable:	LongVariable: Avoid excessively long variable names like inventoryServiceImpl
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:27:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:32:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:32:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'inventory' is not assigned and could be declared final
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:35:	OnlyOneReturn:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:36:	AvoidCatchingGenericException:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:42:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:42:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'inventory' is not assigned and could be declared final
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:42:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'inventoryId' is not assigned and could be declared final
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:48:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:48:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'inventoryId' is not assigned and could be declared final
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:54:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/deepak/microservices/inventory/controller/InventoryController.java:54:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'inventoryId' is not assigned and could be declared final
+src/main/java/com/deepak/microservices/inventory/model/Inventory.java:22:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/deepak/microservices/inventory/model/Inventory.java:26:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/deepak/microservices/inventory/model/Inventory.java:29:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/deepak/microservices/inventory/model/Inventory.java:31:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/deepak/microservices/inventory/model/Inventory.java:34:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/deepak/microservices/inventory/repository/InventoryRepo.java:9:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/deepak/microservices/inventory/service/InventoryService.java:10:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/deepak/microservices/inventory/service/InventoryService.java:12:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/deepak/microservices/inventory/service/InventoryService.java:14:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/deepak/microservices/inventory/service/InventoryService.java:16:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/deepak/microservices/inventory/service/InventoryService.java:18:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/deepak/microservices/inventory/service/InventoryService.java:20:	CommentRequired:	CommentRequired: Public method and constructor comments are required
+src/main/java/com/deepak/microservices/inventory/service/InventoryServiceImpl.java:13:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/com/deepak/microservices/inventory/service/InventoryServiceImpl.java:13:	CommentRequired:	CommentRequired: Class comments are required
+src/main/java/com/deepak/microservices/inventory/service/InventoryServiceImpl.java:16:	CommentRequired:	CommentRequired: Field comments are required
+src/main/java/com/deepak/microservices/inventory/service/InventoryServiceImpl.java:25:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'inventory' is not assigned and could be declared final
+src/main/java/com/deepak/microservices/inventory/service/InventoryServiceImpl.java:32:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'inventory' is not assigned and could be declared final
+src/main/java/com/deepak/microservices/inventory/service/InventoryServiceImpl.java:32:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'inventoryId' is not assigned and could be declared final
+src/main/java/com/deepak/microservices/inventory/service/InventoryServiceImpl.java:39:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'inventoryId' is not assigned and could be declared final
+src/main/java/com/deepak/microservices/inventory/service/InventoryServiceImpl.java:46:	MethodArgumentCouldBeFinal:	MethodArgumentCouldBeFinal: Parameter 'inventoryId' is not assigned and could be declared final
+src/test/java/com/deepak/microservices/inventory/InventoryMicroservices/InventoryMicroservicesApplicationTests.java:1:	PackageCase:	PackageCase: Package name contains upper case characters
+src/test/java/com/deepak/microservices/inventory/InventoryMicroservices/InventoryMicroservicesApplicationTests.java:7:	AtLeastOneConstructor:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/test/java/com/deepak/microservices/inventory/InventoryMicroservices/InventoryMicroservicesApplicationTests.java:7:	CommentRequired:	CommentRequired: Class comments are required
+src/test/java/com/deepak/microservices/inventory/InventoryMicroservices/InventoryMicroservicesApplicationTests.java:10:	JUnitTestsShouldIncludeAssert:	JUnitTestsShouldIncludeAssert: JUnit tests should include assert() or fail()
+src/test/java/com/deepak/microservices/inventory/InventoryMicroservices/InventoryMicroservicesApplicationTests.java:10:	UncommentedEmptyMethodBody:	UncommentedEmptyMethodBody: Document empty method body
