@@ -5,6 +5,7 @@ package com.deepak.microservices.staff.model;
 //import javax.persistence.GenerationType;
 //import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import org.springframework.data.annotation.Id;
@@ -30,6 +31,7 @@ public class Staff {
 
 	@NotNull(message = "Staff Name cannnot be Null")
 	@Size(min = 3, message = "Staff Name should be minimum of 3 digits")
+	@Pattern(regexp = "^[a-zA-Z\\s]+$", message = "Staff Name should only contain letters and spaces")
 	private String staffName;
 
 	@NotNull(message = "Staff Address cannnot be Null")

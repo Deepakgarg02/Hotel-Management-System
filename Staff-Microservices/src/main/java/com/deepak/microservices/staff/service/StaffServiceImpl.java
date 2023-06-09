@@ -1,11 +1,13 @@
 package com.deepak.microservices.staff.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.deepak.microservices.staff.exception.StaffNotFoundException;
 import com.deepak.microservices.staff.model.Staff;
 import com.deepak.microservices.staff.repository.StaffRepo;
 
@@ -22,21 +24,21 @@ public class StaffServiceImpl implements StaffService {
 	}
 
 	@Override
-	public Optional<Staff> getStaffById(String staffId) {
+	public Optional<Staff> getStaffById(String staffId) throws StaffNotFoundException {
 		// TODO Auto-generated method stub
 		return staffRepo.findById(staffId);
 	}
 
 	@Override
-	public void modifyStaffById(String staffId, Staff staff) {
+	public void modifyStaffById(String staffId, Staff staff) throws StaffNotFoundException {
 		// TODO Auto-generated method
 		Optional<Staff> existingStaffOptional = staffRepo.findById(staffId);
 
 		if (existingStaffOptional.isPresent()) {
 			Staff existingStaff = existingStaffOptional.get();
-			
+
 			// Update the necessary fields of the existing staff record
- 			existingStaff.setStaffName(staff.getStaffName());
+			existingStaff.setStaffName(staff.getStaffName());
 			existingStaff.setStaffAge(staff.getStaffAge());
 			existingStaff.setStaffAddress(staff.getStaffAddress());
 			existingStaff.setStaffSalary(staff.getStaffSalary());
@@ -46,7 +48,7 @@ public class StaffServiceImpl implements StaffService {
 	}
 
 	@Override
-	public void deleteStaffById(String staffId) {
+	public void deleteStaffById(String staffId) throws StaffNotFoundException {
 		// TODO Auto-generated method stub
 		staffRepo.deleteById(staffId);
 	}
@@ -59,9 +61,13 @@ public class StaffServiceImpl implements StaffService {
 	}
 
 	@Override
-	public List<Staff> getStaffByName(String staffName) {
+	public List<Staff> getStaffByName(String staffName) throws StaffNotFoundException {
 		// TODO Auto-generated method stub
-		return staffRepo.findByStaffName(staffName);
+		if (!staffName.matches("^[a-zA-Z\\s]+$")) {
+	        throw new StaffNotFoundException("Invalid Staff Name");
+	    }
+		List<Staff> staff = staffRepo.findByStaffName(staffName);
+		return staff;
 
 	}
 

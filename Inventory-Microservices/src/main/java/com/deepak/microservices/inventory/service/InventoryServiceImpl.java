@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.deepak.microservices.inventory.exception.InventoryNotFoundException;
 import com.deepak.microservices.inventory.model.Inventory;
 import com.deepak.microservices.inventory.repository.InventoryRepo;
 
@@ -29,7 +30,7 @@ public class InventoryServiceImpl implements InventoryService {
 	}
 
 	@Override
-	public void modifyInventoryById(String inventoryId, Inventory inventory) {
+	public void modifyInventoryById(String inventoryId, Inventory inventory) throws InventoryNotFoundException {
 		Optional<Inventory> existingInventoryOptional = inventoryRepo.findById(inventoryId);
 		if (existingInventoryOptional.isPresent()) {
 			Inventory existingInventory = existingInventoryOptional.get();
@@ -44,14 +45,14 @@ public class InventoryServiceImpl implements InventoryService {
 	}
 
 	@Override
-	public void deleteInvenotryById(String inventoryId) {
+	public void deleteInvenotryById(String inventoryId) throws InventoryNotFoundException {
 		// TODO Auto-generated method stub
 		inventoryRepo.deleteById(inventoryId);
 
 	}
 
 	@Override
-	public Optional<Inventory> getInventoryById(String inventoryId) {
+	public Optional<Inventory> getInventoryById(String inventoryId) throws InventoryNotFoundException {
 		// TODO Auto-generated method stub
 		return inventoryRepo.findById(inventoryId);
 	}

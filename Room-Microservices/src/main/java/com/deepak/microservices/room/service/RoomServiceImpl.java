@@ -6,6 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.deepak.microservices.room.exception.RoomNotAvailableException;
+import com.deepak.microservices.room.exception.RoomNotFoundExcption;
 import com.deepak.microservices.room.model.Room;
 import com.deepak.microservices.room.repository.RoomRepo;
 
@@ -29,7 +31,7 @@ public class RoomServiceImpl implements RoomService{
 	}
 
 	@Override
-	public void modifyRoomById(String roomId, Room room) {
+	public void modifyRoomById(String roomId, Room room) throws RoomNotFoundExcption{
 	    Optional<Room> existingRoomOptional = roomRepo.findById(roomId);
 	    if (existingRoomOptional.isPresent()) {
 	        Room existingRoom = existingRoomOptional.get();
@@ -44,20 +46,20 @@ public class RoomServiceImpl implements RoomService{
 	}
 
 	@Override
-	public void deleteRoomById(String roomId) {
+	public void deleteRoomById(String roomId) throws RoomNotFoundExcption{
 		// TODO Auto-generated method stub
 		roomRepo.deleteById(roomId);
 		
 	}
 
 	@Override
-	public Optional<Room> getRoomById(String roomId) {
+	public Optional<Room> getRoomById(String roomId) throws RoomNotFoundExcption{
 		// TODO Auto-generated method stub
 		return roomRepo.findById(roomId);
 	}
 
 	@Override
-	public List<Room> getRoomAvailable(boolean roomAvail) {
+	public List<Room> getRoomAvailable(boolean roomAvail) throws RoomNotAvailableException{
 		// TODO Auto-generated method stub
 		return roomRepo.findByRoomAvail(roomAvail);
 	}

@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.deepak.microservices.guest.exception.GuestNotFoundException;
 import com.deepak.microservices.guest.model.Guest;
 import com.deepak.microservices.guest.repository.GuestRepo;
 
@@ -29,7 +30,7 @@ public class GuestServiceImpl implements GuestService {
 	}
 
 	@Override
-	public void modifyGuest(String guestId, Guest guest) {
+	public void modifyGuest(String guestId, Guest guest) throws GuestNotFoundException {
 		Optional<Guest> existingGuestOptional = guestRepo.findById(guestId);
 		if (existingGuestOptional.isPresent()) {
 			Guest existingGuest = existingGuestOptional.get();
@@ -47,14 +48,14 @@ public class GuestServiceImpl implements GuestService {
 	}
 
 	@Override
-	public void deleteGuest(String guestId) {
+	public void deleteGuest(String guestId) throws GuestNotFoundException {
 		// TODO Auto-generated method stub
 		guestRepo.deleteById(guestId);
 
 	}
 
 	@Override
-	public Optional<Guest> getGuestById(String guestId) {
+	public Optional<Guest> getGuestById(String guestId) throws GuestNotFoundException {
 		// TODO Auto-generated method stub
 		return guestRepo.findById(guestId);
 	}

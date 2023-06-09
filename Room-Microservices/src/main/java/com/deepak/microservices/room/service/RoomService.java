@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.deepak.microservices.room.exception.RoomNotAvailableException;
+import com.deepak.microservices.room.exception.RoomNotFoundExcption;
 import com.deepak.microservices.room.model.Room;
 
 @Service
@@ -14,12 +16,12 @@ public interface RoomService {
 	
 	void addRoom(Room room);
 	
-	void modifyRoomById(String roomId, Room room);
+	void modifyRoomById(String roomId, Room room) throws RoomNotFoundExcption;
 	
-	void deleteRoomById(String roomId);
+	void deleteRoomById(String roomId) throws RoomNotFoundExcption;
 	
-	Optional<Room> getRoomById(String roomId);
+	Optional<Room> getRoomById(String roomId) throws RoomNotFoundExcption;
 	
-	List<Room> getRoomAvailable(boolean roomAvail);
+	List<Room> getRoomAvailable(boolean roomAvail) throws RoomNotAvailableException;
 
 }

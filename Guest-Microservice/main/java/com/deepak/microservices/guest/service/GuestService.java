@@ -5,8 +5,9 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
+import com.deepak.microservices.guest.exception.GuestNotFoundException;
 import com.deepak.microservices.guest.model.Guest;
- 
+
 @Service
 public interface GuestService {
 
@@ -14,9 +15,9 @@ public interface GuestService {
 
 	void addGuest(Guest guest);
 
-	void modifyGuest(String guestId, Guest guest);
+	void modifyGuest(String guestId, Guest guest) throws GuestNotFoundException;
 
-	void deleteGuest(String guestId);
+	void deleteGuest(String guestId) throws GuestNotFoundException;
 
-	Optional<Guest> getGuestById(String guestId);
+	Optional<Guest> getGuestById(String guestId) throws GuestNotFoundException;
 }
