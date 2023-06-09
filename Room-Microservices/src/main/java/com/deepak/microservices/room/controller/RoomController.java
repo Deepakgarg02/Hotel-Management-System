@@ -52,7 +52,7 @@ public class RoomController {
 	}
 
 	@GetMapping("/search/{roomAvail}")
-	public List<Room> getAvailRoom(@PathVariable String roomAvail) {
+	public List<Room> getAvailRoom(@PathVariable boolean roomAvail) {
 		return roomServiceImpl.getRoomAvailable(roomAvail);
 	}
 
