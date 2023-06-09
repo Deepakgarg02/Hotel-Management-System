@@ -5,6 +5,7 @@ package com.deepak.microservices.room.model;
 //import javax.persistence.GenerationType;
 //import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -24,8 +25,7 @@ import lombok.ToString;
 public class Room {
 	
 	@Id
-//	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String roomId;
+ 	private String roomId;
 	
 	@NotNull(message = "Room Type can not be Null")
 	private String roomType;
@@ -34,6 +34,7 @@ public class Room {
 	private boolean roomAvail;
 	
 	@NotNull(message = "Room Price can not be Null")
+	@Positive
 	private double roomPrice;
 
 }

@@ -42,8 +42,7 @@ public class GuestServiceImpl implements GuestService {
 			existingGuest.setGuestGender(guest.getGuestGender());
 
 			// Save the updated guest record
-			guestRepo.save(existingGuest);
-			;
+			guestRepo.save(existingGuest);	
 		}
 	}
 

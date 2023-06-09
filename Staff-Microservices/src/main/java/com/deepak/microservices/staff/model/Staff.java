@@ -6,6 +6,7 @@ package com.deepak.microservices.staff.model;
 //import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 import org.springframework.data.annotation.Id;
@@ -38,8 +39,10 @@ public class Staff {
 	@Size(min = 5, message = "Staff Address should be minimum of 5 digits")
 	private String staffAddress;
 
-	private String staffSalary;
+	@NotNull(message = "Staff Salary Can not be Null")
+	private double staffSalary;
 
+	@Positive
 	private int staffAge;
 
 	@NotNull(message = "Staff MailId cannnot be Null")
