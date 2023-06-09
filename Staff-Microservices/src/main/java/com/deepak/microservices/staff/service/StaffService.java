@@ -12,11 +12,11 @@ public interface StaffService {
 
 	List<Staff> getAllStaffs();
 
-	Optional<Staff> getStaffById(long staffId);
+	Optional<Staff> getStaffById(String staffId);
 
-	void modifyStaffById(long staffId, Staff staff);
+	void modifyStaffById(String staffId, Staff staff);
 
-	void deleteStaffById(long staffId);
+	void deleteStaffById(String staffId);
 
 	void addStaff(Staff staff);
 

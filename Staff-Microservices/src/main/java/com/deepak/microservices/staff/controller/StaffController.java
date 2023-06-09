@@ -29,7 +29,7 @@ public class StaffController {
 	}
 
 	@GetMapping("/get/id/{staffId}")
-	public Optional<Staff> getStaffById(@PathVariable long staffId) {
+	public Optional<Staff> getStaffById(@PathVariable String staffId) {
 		return staffServiceImpl.getStaffById(staffId);
 	}
 
@@ -39,13 +39,13 @@ public class StaffController {
 	}
 
 	@DeleteMapping("/delete/{staffId}")
-	public String deleteStaffById(@PathVariable long staffId) {
+	public String deleteStaffById(@PathVariable String staffId) {
 		staffServiceImpl.deleteStaffById(staffId);
 		return "Staff Deleted with StaffId " + staffId;
 	}
 
 	@PutMapping("/modify/{staffId}")
-	public String modifyStaffById(@RequestBody Staff staff, @PathVariable long staffId) {
+	public String modifyStaffById(@RequestBody Staff staff, @PathVariable String staffId) {
 		staffServiceImpl.modifyStaffById(staffId, staff);
 		return "Staff Modified with StaffId " + staffId;
 	}

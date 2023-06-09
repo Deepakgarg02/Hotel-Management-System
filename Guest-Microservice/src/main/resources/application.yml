@@ -1,9 +1,12 @@
 server:
   port: 8080
-  name: localhost
 spring:
   application:
     name: Guest-Microservice
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: Online-Hotel-Management-System
 #  datasource:
 #    url: jdbc:h2:mem:testdb
 #    driver-class-name: org.h2.Driver
@@ -17,11 +20,6 @@ spring:
 #      path: /h2-console
 #      settings:
 #        trace: false  
-
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017
-      database: Online-Hotel-Management-System
      
 eureka:
   instance:

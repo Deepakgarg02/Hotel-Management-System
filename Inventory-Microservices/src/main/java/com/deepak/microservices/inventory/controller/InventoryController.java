@@ -39,19 +39,19 @@ public class InventoryController {
 	}
 
 	@PutMapping("/modify/{inventoryId}")
-	public String modifyInventoryById(@PathVariable long inventoryId, @RequestBody Inventory inventory) {
+	public String modifyInventoryById(@PathVariable String inventoryId, @RequestBody Inventory inventory) {
 		inventoryServiceImpl.modifyInventoryById(inventoryId, inventory);
 		return "Inventory Updated with inventoryId " + inventoryId;
 	}
 
 	@DeleteMapping("/delete/{inventoryId}")
-	public String deleteInventoryById(@PathVariable long inventoryId) {
+	public String deleteInventoryById(@PathVariable String inventoryId) {
 		inventoryServiceImpl.deleteInvenotryById(inventoryId);
 		return "Inventory Deleted with inventoryId " + inventoryId;
 	}
 
 	@GetMapping("/get/{inventoryId}")
-	public Optional<Inventory> getInventoryById(@PathVariable long inventoryId) {
+	public Optional<Inventory> getInventoryById(@PathVariable String inventoryId) {
 		return inventoryServiceImpl.getInventoryById(inventoryId);
 	}
 

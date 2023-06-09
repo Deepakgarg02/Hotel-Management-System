@@ -1,10 +1,13 @@
 package com.deepak.microservices.room.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+//import javax.persistence.Entity;
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
+//import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,12 +20,12 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Entity
+@Document(collection = "Room-Service")
 public class Room {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long roomId;
+//	@GeneratedValue(strategy = GenerationType.AUTO)
+	private String roomId;
 	
 	@NotNull(message = "Room Type can not be Null")
 	private String roomType;

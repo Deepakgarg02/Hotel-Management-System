@@ -39,19 +39,19 @@ public class GuestController {
 	}
 
 	@PutMapping("/modify/{guestId}")
-	public String modifyGuest(@PathVariable long guestId, @RequestBody Guest guest) {
+	public String modifyGuest(@PathVariable String guestId, @RequestBody Guest guest) {
 		guestServiceImpl.modifyGuest(guestId, guest);
 		return "Guest Updated with the guestId " + guestId;
 	}
 
 	@DeleteMapping("/delete/{guestId}")
-	public String deleteGuest(@PathVariable long guestId) {
+	public String deleteGuest(@PathVariable String guestId) {
 		guestServiceImpl.deleteGuest(guestId);
 		return "Guest Deleted with guestId " + guestId;
 	}
 
 	@GetMapping("/get/{guestId}")
-	public Optional<Guest> getGuestById(@PathVariable long guestId) {
+	public Optional<Guest> getGuestById(@PathVariable String guestId) {
 		return guestServiceImpl.getGuestById(guestId);
 	}
 

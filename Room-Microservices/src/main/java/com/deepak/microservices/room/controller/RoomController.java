@@ -35,24 +35,24 @@ public class RoomController {
 	}
 
 	@PutMapping("/modify/{roomId}")
-	public String modifyRoomById(@RequestBody Room room, @PathVariable long roomId) {
+	public String modifyRoomById(@RequestBody Room room, @PathVariable String roomId) {
 		roomServiceImpl.modifyRoomById(roomId, room);
 		return "Room Modified with roomId " + roomId;
 	}
 
 	@DeleteMapping("/delete/{roomId}")
-	public String deleteRoomById(@PathVariable long roomId) {
+	public String deleteRoomById(@PathVariable String roomId) {
 		roomServiceImpl.deleteRoomById(roomId);
 		return "Room Deleted with roomId " + roomId;
 	}
 
 	@GetMapping("/get/{roomId}")
-	public Optional<Room> getRoomById(@PathVariable long roomId) {
+	public Optional<Room> getRoomById(@PathVariable String roomId) {
 		return roomServiceImpl.getRoomById(roomId);
 	}
 
 	@GetMapping("/search/{roomAvail}")
-	public List<Room> getAvailRoom(@PathVariable boolean roomAvail) {
+	public List<Room> getAvailRoom(@PathVariable String roomAvail) {
 		return roomServiceImpl.getRoomAvailable(roomAvail);
 	}
 

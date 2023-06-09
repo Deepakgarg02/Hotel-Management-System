@@ -29,21 +29,29 @@ public class RoomServiceImpl implements RoomService{
 	}
 
 	@Override
-	public void modifyRoomById(long roomId, Room room) {
-		// TODO Auto-generated method stub
-		roomRepo.save(room);
-		
+	public void modifyRoomById(String roomId, Room room) {
+	    Optional<Room> existingRoomOptional = roomRepo.findById(roomId);
+	    if (existingRoomOptional.isPresent()) {
+	        Room existingRoom = existingRoomOptional.get();
+	        // Update the fields of the existing room with the new values
+	        existingRoom.setRoomPrice(room.getRoomPrice());
+	        existingRoom.setRoomType(room.getRoomType());
+	        existingRoom.setRoomAvail(room.isRoomAvail());
+
+	        // Save the updated room record
+	        roomRepo.save(existingRoom);
+	    }
 	}
 
 	@Override
-	public void deleteRoomById(long roomId) {
+	public void deleteRoomById(String roomId) {
 		// TODO Auto-generated method stub
 		roomRepo.deleteById(roomId);
 		
 	}
 
 	@Override
-	public Optional<Room> getRoomById(long roomId) {
+	public Optional<Room> getRoomById(String roomId) {
 		// TODO Auto-generated method stub
 		return roomRepo.findById(roomId);
 	}

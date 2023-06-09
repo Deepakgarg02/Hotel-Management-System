@@ -14,9 +14,9 @@ public interface GuestService {
 
 	void addGuest(Guest guest);
 
-	void modifyGuest(long guestId, Guest guest);
+	void modifyGuest(String guestId, Guest guest);
 
-	void deleteGuest(long guestId);
+	void deleteGuest(String guestId);
 
-	Optional<Guest> getGuestById(long guestId);
+	Optional<Guest> getGuestById(String guestId);
 }

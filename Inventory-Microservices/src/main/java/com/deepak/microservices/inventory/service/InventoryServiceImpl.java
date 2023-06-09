@@ -10,8 +10,8 @@ import com.deepak.microservices.inventory.model.Inventory;
 import com.deepak.microservices.inventory.repository.InventoryRepo;
 
 @Service
-public class InventoryServiceImpl implements InventoryService{
-	
+public class InventoryServiceImpl implements InventoryService {
+
 	@Autowired
 	private InventoryRepo inventoryRepo;
 
@@ -25,25 +25,33 @@ public class InventoryServiceImpl implements InventoryService{
 	public void addInventory(Inventory inventory) {
 		// TODO Auto-generated method stub
 		inventoryRepo.save(inventory);
-		
+
 	}
 
 	@Override
-	public void modifyInventoryById(long inventoryId, Inventory inventory) {
-		// TODO Auto-generated method stub
-		getInventoryById(inventoryId);
-		inventoryRepo.save(inventory);
+	public void modifyInventoryById(String inventoryId, Inventory inventory) {
+		Optional<Inventory> existingInventoryOptional = inventoryRepo.findById(inventoryId);
+		if (existingInventoryOptional.isPresent()) {
+			Inventory existingInventory = existingInventoryOptional.get();
+			// Update the fields of the existing inventory with the new values
+			existingInventory.setInventoryName(inventory.getInventoryName());
+			existingInventory.setInventoryStock(inventory.getInventoryStock());
+			existingInventory.setInventoryType(inventory.getInventoryType());
+
+			// Save the updated inventory record
+			inventoryRepo.save(existingInventory);
+		}
 	}
 
 	@Override
-	public void deleteInvenotryById(long inventoryId) {
+	public void deleteInvenotryById(String inventoryId) {
 		// TODO Auto-generated method stub
 		inventoryRepo.deleteById(inventoryId);
-		
+
 	}
 
 	@Override
-	public Optional<Inventory> getInventoryById(long inventoryId) {
+	public Optional<Inventory> getInventoryById(String inventoryId) {
 		// TODO Auto-generated method stub
 		return inventoryRepo.findById(inventoryId);
 	}

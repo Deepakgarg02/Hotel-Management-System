@@ -14,11 +14,11 @@ public interface RoomService {
 	
 	void addRoom(Room room);
 	
-	void modifyRoomById(long roomId, Room room);
+	void modifyRoomById(String roomId, Room room);
 	
-	void deleteRoomById(long roomId);
+	void deleteRoomById(String roomId);
 	
-	Optional<Room> getRoomById(long roomId);
+	Optional<Room> getRoomById(String roomId);
 	
 	List<Room> getRoomAvailable(boolean roomAvail);
 

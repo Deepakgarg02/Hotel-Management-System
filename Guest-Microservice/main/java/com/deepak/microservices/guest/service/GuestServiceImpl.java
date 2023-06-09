@@ -8,11 +8,10 @@ import org.springframework.stereotype.Service;
 
 import com.deepak.microservices.guest.model.Guest;
 import com.deepak.microservices.guest.repository.GuestRepo;
- 
 
 @Service
-public class GuestServiceImpl implements GuestService{
-	
+public class GuestServiceImpl implements GuestService {
+
 	@Autowired
 	private GuestRepo guestRepo;
 
@@ -26,25 +25,36 @@ public class GuestServiceImpl implements GuestService{
 	public void addGuest(Guest guest) {
 		// TODO Auto-generated method stub
 		guestRepo.save(guest);
-		
+
 	}
 
 	@Override
-	public void modifyGuest(long guestId, Guest guest) {
-		// TODO Auto-generated method stub
-		guestRepo.save(guest);
-		
+	public void modifyGuest(String guestId, Guest guest) {
+		Optional<Guest> existingGuestOptional = guestRepo.findById(guestId);
+		if (existingGuestOptional.isPresent()) {
+			Guest existingGuest = existingGuestOptional.get();
+			// Update the fields of the existing guest with the new values
+			existingGuest.setGuestName(guest.getGuestName());
+			existingGuest.setGuestAddress(guest.getGuestAddress());
+			existingGuest.setGuestContact(guest.getGuestContact());
+			existingGuest.setGuestEmail(guest.getGuestEmail());
+			existingGuest.setGuestGender(guest.getGuestGender());
+
+			// Save the updated guest record
+			guestRepo.save(existingGuest);
+			;
+		}
 	}
 
 	@Override
-	public void deleteGuest(long guestId) {
+	public void deleteGuest(String guestId) {
 		// TODO Auto-generated method stub
 		guestRepo.deleteById(guestId);
-		
+
 	}
 
 	@Override
-	public Optional<Guest> getGuestById(long guestId) {
+	public Optional<Guest> getGuestById(String guestId) {
 		// TODO Auto-generated method stub
 		return guestRepo.findById(guestId);
 	}

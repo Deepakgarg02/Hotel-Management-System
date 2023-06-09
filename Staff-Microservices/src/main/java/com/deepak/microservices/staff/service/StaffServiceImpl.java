@@ -22,20 +22,31 @@ public class StaffServiceImpl implements StaffService {
 	}
 
 	@Override
-	public Optional<Staff> getStaffById(long staffId) {
+	public Optional<Staff> getStaffById(String staffId) {
 		// TODO Auto-generated method stub
 		return staffRepo.findById(staffId);
 	}
 
 	@Override
-	public void modifyStaffById(long staffId, Staff staff) {
-		// TODO Auto-generated method stub
-		staffRepo.save(staff);
+	public void modifyStaffById(String staffId, Staff staff) {
+		// TODO Auto-generated method
+		Optional<Staff> existingStaffOptional = staffRepo.findById(staffId);
 
+		if (existingStaffOptional.isPresent()) {
+			Staff existingStaff = existingStaffOptional.get();
+			
+			// Update the necessary fields of the existing staff record
+ 			existingStaff.setStaffName(staff.getStaffName());
+			existingStaff.setStaffAge(staff.getStaffAge());
+			existingStaff.setStaffAddress(staff.getStaffAddress());
+			existingStaff.setStaffSalary(staff.getStaffSalary());
+			existingStaff.setStaffEmail(staff.getStaffEmail());
+			staffRepo.save(existingStaff);
+		}
 	}
 
 	@Override
-	public void deleteStaffById(long staffId) {
+	public void deleteStaffById(String staffId) {
 		// TODO Auto-generated method stub
 		staffRepo.deleteById(staffId);
 	}

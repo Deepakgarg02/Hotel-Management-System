@@ -13,10 +13,10 @@ public interface InventoryService {
 
 	void addInventory(Inventory inventory);
 
-	void modifyInventoryById(long inventoryId, Inventory inventory);
+	void modifyInventoryById(String inventoryId, Inventory inventory);
 
-	void deleteInvenotryById(long inventoryId);
+	void deleteInvenotryById(String inventoryId);
 
-	Optional<Inventory> getInventoryById(long inventoryId);
+	Optional<Inventory> getInventoryById(String inventoryId);
 
 }
