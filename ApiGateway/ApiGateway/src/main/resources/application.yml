@@ -26,6 +26,11 @@ spring:
           uri: lb://Staff-Microservice
           predicates:
             - Path=/staff/**      
+
+        - id: Reservation-Service
+          uri: lb://Reservation-Service
+          predicates:
+            - Path=/reservation/**      
 eureka:
   instance:
     prefer-ip-address: true
