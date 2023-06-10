@@ -10011,3 +10011,291 @@ java.lang.Exception: File not found: C:\Users\Asus\Desktop\Hotel-Management-Syst
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:196)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:289)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-10 15:29:32.035
+!MESSAGE Classpath changed for project: Reservation-Microservices
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-10 15:29:32.046
+!MESSAGE Boot project ADDED: Reservation-Microservices
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:29:32.119
+!MESSAGE executing callback sts4.classpath.uffVpUSk FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:29:32.120
+!MESSAGE No language server has registered to handle command 'sts4.classpath.uffVpUSk'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.uffVpUSk'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:29:32.122
+!MESSAGE executing callback sts4.classpath.QtmUfXzi FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:29:32.123
+!MESSAGE No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 368 2023-06-10 15:29:52.260
+!MESSAGE Resource '/Reservation-Microservices/src/main/java/com/deepak/microservices/reservation/ReservationMicroservicesApplication.java' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/Reservation-Microservices/src/main/java/com/deepak/microservices/reservation/ReservationMicroservicesApplication.java' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Resource.createMarker(Resource.java:701)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers$1.runInWorkspace(LSPDiagnosticsToMarkers.java:166)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 368 2023-06-10 15:29:52.261
+!MESSAGE Resource '/Reservation-Microservices/src/main/java/com/deepak/microservices/reservation/repository/ReservationRepo.java' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/Reservation-Microservices/src/main/java/com/deepak/microservices/reservation/repository/ReservationRepo.java' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Resource.createMarker(Resource.java:701)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers$1.runInWorkspace(LSPDiagnosticsToMarkers.java:166)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 368 2023-06-10 15:29:52.262
+!MESSAGE Resource '/Reservation-Microservices/src/main/java/com/deepak/microservices/reservation/repository/ReservationRepo.java' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/Reservation-Microservices/src/main/java/com/deepak/microservices/reservation/repository/ReservationRepo.java' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Resource.createMarker(Resource.java:701)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers$1.runInWorkspace(LSPDiagnosticsToMarkers.java:166)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 368 2023-06-10 15:29:52.263
+!MESSAGE Resource '/Reservation-Microservices/src/main/java/com/deepak/microservices/reservation/configure/ReservationSwagger.java' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/Reservation-Microservices/src/main/java/com/deepak/microservices/reservation/configure/ReservationSwagger.java' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Resource.createMarker(Resource.java:701)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers$1.runInWorkspace(LSPDiagnosticsToMarkers.java:166)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 368 2023-06-10 15:29:52.263
+!MESSAGE Resource '/Reservation-Microservices/src/main/java/com/deepak/microservices/reservation/configure/ReservationSwagger.java' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/Reservation-Microservices/src/main/java/com/deepak/microservices/reservation/configure/ReservationSwagger.java' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Resource.createMarker(Resource.java:701)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers$1.runInWorkspace(LSPDiagnosticsToMarkers.java:166)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.resources 4 368 2023-06-10 15:29:52.264
+!MESSAGE Resource '/Reservation-Microservices/src/main/java/com/deepak/microservices/reservation/ReservationMicroservicesApplication.java' does not exist.
+!STACK 0
+java.lang.Exception: Resource '/Reservation-Microservices/src/main/java/com/deepak/microservices/reservation/ReservationMicroservicesApplication.java' does not exist.
+	at org.eclipse.core.internal.resources.ResourceException.provideStackTrace(ResourceException.java:42)
+	at org.eclipse.core.internal.resources.ResourceException.<init>(ResourceException.java:38)
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:330)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:204)
+	at org.eclipse.core.internal.resources.Resource.createMarker(Resource.java:701)
+	at org.eclipse.lsp4e.operations.diagnostics.LSPDiagnosticsToMarkers$1.runInWorkspace(LSPDiagnosticsToMarkers.java:166)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-10 15:29:52.391
+!MESSAGE Classpath changed for project: Reservation-Microservices
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:29:52.392
+!MESSAGE executing callback sts4.classpath.QtmUfXzi FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:29:52.392
+!MESSAGE executing callback sts4.classpath.uffVpUSk FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:29:52.393
+!MESSAGE No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-10 15:29:52.394
+!MESSAGE Boot project REMOVED: Reservation-Microservices
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:29:52.395
+!MESSAGE executing callback sts4.classpath.QtmUfXzi FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:29:52.395
+!MESSAGE No language server has registered to handle command 'sts4.classpath.uffVpUSk'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.uffVpUSk'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:29:52.396
+!MESSAGE No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-10 15:31:01.838
+!MESSAGE Classpath changed for project: Reservation-Microservices
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:31:01.874
+!MESSAGE executing callback sts4.classpath.uffVpUSk FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:31:01.875
+!MESSAGE No language server has registered to handle command 'sts4.classpath.uffVpUSk'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.uffVpUSk'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:31:01.876
+!MESSAGE executing callback sts4.classpath.QtmUfXzi FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:31:01.876
+!MESSAGE No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-10 15:31:03.406
+!MESSAGE Classpath changed for project: Reservation-Microservices
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:31:03.439
+!MESSAGE executing callback sts4.classpath.uffVpUSk FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:31:03.444
+!MESSAGE executing callback sts4.classpath.QtmUfXzi FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:31:03.445
+!MESSAGE No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:31:03.447
+!MESSAGE No language server has registered to handle command 'sts4.classpath.uffVpUSk'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.uffVpUSk'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-10 15:31:04.474
+!MESSAGE Classpath changed for project: Reservation-Microservices
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-10 15:31:04.511
+!MESSAGE Boot project ADDED: Reservation-Microservices
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:31:04.595
+!MESSAGE executing callback sts4.classpath.uffVpUSk FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:31:04.596
+!MESSAGE No language server has registered to handle command 'sts4.classpath.uffVpUSk'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.uffVpUSk'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:31:04.604
+!MESSAGE executing callback sts4.classpath.QtmUfXzi FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:31:04.605
+!MESSAGE No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-10 15:31:05.529
+!MESSAGE Classpath changed for project: Reservation-Microservices
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:31:05.832
+!MESSAGE executing callback sts4.classpath.QtmUfXzi FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:31:05.851
+!MESSAGE No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:31:05.955
+!MESSAGE executing callback sts4.classpath.uffVpUSk FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:31:05.958
+!MESSAGE No language server has registered to handle command 'sts4.classpath.uffVpUSk'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.uffVpUSk'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-06-10 15:31:08.136
+!MESSAGE Classpath changed for project: Reservation-Microservices
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:31:08.255
+!MESSAGE executing callback sts4.classpath.QtmUfXzi FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:31:08.256
+!MESSAGE No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.QtmUfXzi'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2023-06-10 15:31:08.315
+!MESSAGE executing callback sts4.classpath.uffVpUSk FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2023-06-10 15:31:08.316
+!MESSAGE No language server has registered to handle command 'sts4.classpath.uffVpUSk'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.uffVpUSk'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:42)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
