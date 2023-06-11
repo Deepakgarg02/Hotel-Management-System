@@ -11,7 +11,7 @@ import lombok.*;
 public class Users {
 
 	@Id
-	private String Id;
+	private String id;
 
 	private String username;
 
