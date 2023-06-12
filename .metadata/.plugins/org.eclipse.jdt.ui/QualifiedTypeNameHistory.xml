@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UsernameNotFoundException"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-    <fullyQualifiedTypeName name="org.springframework.web.filter.OncePerRequestFilter"/>
     <fullyQualifiedTypeName name="com.microservice.springsecurity.filter.JwtFilterRequest"/>
     <fullyQualifiedTypeName name="com.microservice.springsecurity.repository.UserRepository"/>
     <fullyQualifiedTypeName name="com.microservice.springsecurity.service.UserService"/>
@@ -21,7 +18,6 @@
     <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.configuration.EnableWebSecurity"/>
     <fullyQualifiedTypeName name="org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity"/>
     <fullyQualifiedTypeName name="org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter"/>
-    <fullyQualifiedTypeName name="com.deepak.login.service.UserDetailsServiceImpl"/>
     <fullyQualifiedTypeName name="com.deepak.login.jwtsecurity.AuthEntryPointJwtImpl"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
     <fullyQualifiedTypeName name="com.deepak.login.jwtsecurity.AuthRequestTokenFilter"/>
@@ -44,7 +40,6 @@
     <fullyQualifiedTypeName name="com.deepak.login.repository.UserRepo"/>
     <fullyQualifiedTypeName name="com.deepak.login.jwtsecurity.JwtUtils"/>
     <fullyQualifiedTypeName name="com.deepak.login.payload.request.Login"/>
-    <fullyQualifiedTypeName name="com.deepak.login.service.UserDetailsImpl"/>
     <fullyQualifiedTypeName name="com.deepak.login.payload.response.JwtResponse"/>
     <fullyQualifiedTypeName name="com.deepak.login.payload.request.Signup"/>
     <fullyQualifiedTypeName name="com.deepak.login.payload.response.MessageResponse"/>
@@ -60,4 +55,9 @@
     <fullyQualifiedTypeName name="org.springframework.boot.CommandLineRunner"/>
     <fullyQualifiedTypeName name="com.deepak.login.model.EnumRole"/>
     <fullyQualifiedTypeName name="com.deepak.login.model.Roles"/>
+    <fullyQualifiedTypeName name="com.deepak.login.service.UserDetailsImpl"/>
+    <fullyQualifiedTypeName name="com.deepak.login.service.UserDetailsServiceImpl"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="org.springframework.web.client.HttpClientErrorException.Forbidden"/>
+    <fullyQualifiedTypeName name="org.springframework.core.annotation.Order"/>
 </qualifiedTypeNameHistroy>
