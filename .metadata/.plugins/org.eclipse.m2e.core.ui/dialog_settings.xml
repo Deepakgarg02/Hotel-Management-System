@@ -62,6 +62,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Asus\Desktop\Hotel-Management-System\Login-Service"/>
 			<item value="C:\Users\Asus\Desktop\Hotel-Management-System\Spring-Security"/>
 			<item value="C:\Users\Asus\Desktop\Hotel-Management-System\Reservation-Microservices"/>
 			<item value="C:\Users\Asus\Desktop\Hotel-Management-System\ApiGateway"/>
