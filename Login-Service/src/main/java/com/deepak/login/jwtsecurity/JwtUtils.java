@@ -25,7 +25,8 @@ public class JwtUtils {
 	// Generate a JWT token for the authenticated user
 	public String generateJwtToken(Authentication authentication) {
 		UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
-
+	    Date now = new Date();
+	    Date expiryDate = new Date(now.getTime() + jwtExpirationMs);
 //It takes an Authentication object as a parameter and retrieves the user's details from the
 //principal. It constructs a JWT token using the Jwts.builder() and sets the subject (username)
 //, issuedAt, expiration, and signs it with the specified algorithm and secret key. The token 
@@ -33,8 +34,10 @@ public class JwtUtils {
 		
 		logger.info("UserPrincipal: {}", userPrincipal);
 
-		String jwt = Jwts.builder().setSubject(userPrincipal.getUsername()).setIssuedAt(new Date())
-				.setExpiration(new Date(new Date().getTime() + jwtExpirationMs))
+		String jwt = Jwts.builder()
+				.setSubject(userPrincipal.getUsername())
+				.setIssuedAt(now)
+				.setExpiration(expiryDate)
 				.signWith(SignatureAlgorithm.HS512, jwtSecret).compact();
 		
 		logger.info("Jwt at Generate : {}", jwt);
@@ -45,13 +48,19 @@ public class JwtUtils {
 
 	// Extract the username from the JWT token
 	public String getUserNameFromJwtToken(String token) {
-		return Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody().getSubject();
+		return Jwts.parser()
+				.setSigningKey(jwtSecret)
+			    .parseClaimsJws(token)
+				.getBody()
+				.getSubject();
 	}
 
 	// Validate the JWT token
 	public boolean validateJwtToken(String authToken) {
 		try {
-			Jws<Claims> jwt = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(authToken);
+			Jws<Claims> jwt = Jwts.parser()
+					.setSigningKey(jwtSecret)
+					.parseClaimsJws(authToken);
 			logger.info("Jwt at Validate: {}", jwt);
 			return true;
 		} catch (SignatureException e) {
