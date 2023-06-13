@@ -26,7 +26,7 @@ public class TestController {
 	}
 
 	@GetMapping("/owner")
-	@PreAuthorize("hasRole('[OWNER]')")
+	@PreAuthorize("hasRole('ROLE_OWNER')")
 	public String ownerAccess() {
 		return "Owner Board.";
 	}
