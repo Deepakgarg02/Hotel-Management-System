@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import com.deepak.microservices.reservation.exception.InvalidReservationIdException;
 import com.deepak.microservices.reservation.model.Reservation;
+import com.deepak.microservices.reservation.model.TransactionDetails;
 import com.deepak.microservices.reservation.service.ReservationService;
 
 import io.swagger.annotations.ApiOperation;
@@ -103,5 +104,10 @@ public class ReservationController {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
 		}
 
+	}
+	
+	@GetMapping("/createTransaction/{amount}")
+	public TransactionDetails createTransaction(@PathVariable Double amount) {
+		 return reservationService.createTransaction(amount);
 	}
 }

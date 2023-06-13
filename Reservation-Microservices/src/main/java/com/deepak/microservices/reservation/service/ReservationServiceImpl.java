@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -14,10 +17,18 @@ import com.deepak.microservices.reservation.exception.InvalidReservationIdExcept
 import com.deepak.microservices.reservation.model.Guest;
 import com.deepak.microservices.reservation.model.Reservation;
 import com.deepak.microservices.reservation.model.Room;
+import com.deepak.microservices.reservation.model.TransactionDetails;
 import com.deepak.microservices.reservation.repository.ReservationRepo;
+import com.razorpay.Order;
+import com.razorpay.RazorpayClient;
 
 @Service
 public class ReservationServiceImpl implements ReservationService {
+
+	private static final String KEY = "rzp_test_4V6htKCRtM3WCi";
+	private static final String KEY_SECRET = "HdzLDp1aDpoc1QA0a5mSplN6";
+	private static final String CURRENCY = "INR";
+	private static final Logger logger = LoggerFactory.getLogger(ReservationServiceImpl.class);
 
 	@Autowired
 	private ReservationRepo reservationRepo;
@@ -115,6 +126,39 @@ public class ReservationServiceImpl implements ReservationService {
 		reservation.setGuest(guest);
 
 		return reservationRepo.findById(resId);
+	}
+
+	@Override
+	public TransactionDetails createTransaction(Double amount) {
+		try {
+			JSONObject jsonObject = new JSONObject();
+			jsonObject.put("amount", (amount * 100));
+			jsonObject.put("currency", CURRENCY);
+
+			RazorpayClient razorpayClient = new RazorpayClient(KEY, KEY_SECRET);
+			Order order = razorpayClient.orders.create(jsonObject);
+			logger.info("Order Details: {}", order);
+
+			return prepareTransactionDetails(order);
+			// {"amount":100000,"amount_paid":0,"notes":[],"created_at":1686671711,
+//				"amount_due":100000,"currency":"INR","receipt":null,
+//				"id":"order_M1TGYf2QVnh43Y","entity":"order","offer_id":null,
+//				"status":"created","attempts":0}
+
+		} catch (Exception e) {
+			logger.info("RazorPay Exception: {}", e.getMessage());
+		}
+		return null;
+
+	}
+
+	private TransactionDetails prepareTransactionDetails(Order order) {
+		String orderId = order.get("id");
+		String currency = order.get("currency");
+		Integer amount = order.get("amount");
+
+		TransactionDetails transactionDetails = new TransactionDetails(orderId, currency, amount);
+		return transactionDetails;
 	}
 
 }

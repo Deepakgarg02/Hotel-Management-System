@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.deepak.microservices.reservation.exception.InvalidReservationIdException;
 import com.deepak.microservices.reservation.model.Reservation;
+import com.deepak.microservices.reservation.model.TransactionDetails;
 
 @Service
 public interface ReservationService {
@@ -20,4 +21,7 @@ public interface ReservationService {
 	String deleteReservationById(String resId) throws InvalidReservationIdException;
 
 	Optional<Reservation> getReservationById(String resId) throws InvalidReservationIdException;
+
+	TransactionDetails createTransaction(Double amount);
+
 }
