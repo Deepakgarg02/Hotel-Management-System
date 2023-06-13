@@ -56,6 +56,7 @@ public class AuthRequestTokenFilter extends OncePerRequestFilter {
 				authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 
 				logger.info("UserName Passwor Validation token : {}", authentication);
+				
 				SecurityContextHolder.getContext().setAuthentication(authentication);
 
 			} else {

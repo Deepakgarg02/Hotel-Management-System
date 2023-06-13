@@ -53,6 +53,8 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		<!-- Razor Pay Dependency -->
+		 
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -31,6 +31,12 @@ spring:
           uri: lb://Reservation-Service
           predicates:
             - Path=/reservation/**      
+            
+        - id: Login-Service
+          uri: lb://Login-Service
+          predicates:
+            - Path=/api/auth/**, /api/test/**
+            
 eureka:
   instance:
     prefer-ip-address: true

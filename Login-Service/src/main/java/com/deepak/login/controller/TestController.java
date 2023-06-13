@@ -14,19 +14,19 @@ public class TestController {
 	}
 
 	@GetMapping("/receptionist")
-	@PreAuthorize("hasRole('OWNER') or hasRole('MANAGER') or hasRole('RECEPTIONIST')")
+	@PreAuthorize("hasAnyAuthority('OWNER', 'MANAGER', 'RECEPTIONIST')")
 	public String receptionistAccess() {
 		return "Receptionist Content.";
 	}
 
 	@GetMapping("/manager")
-	@PreAuthorize("hasRole('MANAGER')")
+	@PreAuthorize("hasAuthority('MANAGER')")
 	public String managerAccess() {
 		return "Manager Board.";
 	}
 
 	@GetMapping("/owner")
-	@PreAuthorize("hasRole('ROLE_OWNER')")
+	@PreAuthorize("hasAuthority('OWNER')")
 	public String ownerAccess() {
 		return "Owner Board.";
 	}
