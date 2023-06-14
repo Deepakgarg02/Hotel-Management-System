@@ -19,15 +19,15 @@ public class AuthEntryPointJwtImpl implements AuthenticationEntryPoint {
 	@Override
 	public void commence(HttpServletRequest request, HttpServletResponse response,
 			AuthenticationException authException) throws IOException, ServletException {
-		// Log the unauthorized error with the details of the authentication exception
-		logger.error("Unauthorized error: {}", authException.getMessage());
-
+		if (logger.isErrorEnabled()) {
+			// Log the unauthorized error with the details of the authentication exception
+			logger.error("Unauthorized error: {}", authException.getMessage());
+		}
 		// Send an error response with HTTP status code 401 (Unauthorized) and an error
 		// message
 		response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Error: Unauthorized");
 	}
 }
-
 
 //Overall, the AuthEntryPointJwt class serves as the entry point for handling unauthorized 
 //requests in the JWT-based authentication mechanism. It logs the error and sends 

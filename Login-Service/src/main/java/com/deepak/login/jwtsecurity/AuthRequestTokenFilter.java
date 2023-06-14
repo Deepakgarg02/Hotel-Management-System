@@ -37,7 +37,7 @@ public class AuthRequestTokenFilter extends OncePerRequestFilter {
 			throws ServletException, IOException {
 		try {
 			// Parse the JWT token from the request header
-			logger.debug("=============== filter =================");
+ 
 			logger.info("Request: {}", request);
 			String jwt = parseJwt(request);
 			logger.info("Extracted JWT token: {}", jwt);
