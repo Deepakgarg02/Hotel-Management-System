@@ -10,7 +10,7 @@ spring:
         - id: Guest-Microservice
           uri: lb://Guest-Microservice
           predicates:
-            - Path=/guest/**
+            - Path=/guest/** , /email/**
 
         - id: Inventory-Microservice
           uri: lb://Inventory-Microservice
