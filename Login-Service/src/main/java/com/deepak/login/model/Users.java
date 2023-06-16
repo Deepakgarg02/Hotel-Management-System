@@ -22,7 +22,7 @@ public class Users {
 	private String id;
 
 	@NotBlank
-	@Size(max = 20, message = "Username Can not be Mpre than 20 Words")
+	@Size(max = 20, message = "Username Can not be More than 20 Words")
 	private String username;
 
 	@NotBlank

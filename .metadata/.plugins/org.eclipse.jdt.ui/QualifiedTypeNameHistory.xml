@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Set"/>
-    <fullyQualifiedTypeName name="com.deepak.login.repository.UserRepo"/>
-    <fullyQualifiedTypeName name="com.deepak.login.jwtsecurity.JwtUtils"/>
-    <fullyQualifiedTypeName name="com.deepak.login.payload.request.Login"/>
-    <fullyQualifiedTypeName name="com.deepak.login.payload.response.JwtResponse"/>
-    <fullyQualifiedTypeName name="com.deepak.login.payload.request.Signup"/>
-    <fullyQualifiedTypeName name="com.deepak.login.payload.response.MessageResponse"/>
     <fullyQualifiedTypeName name="com.deepak.login.model.Users"/>
     <fullyQualifiedTypeName name="org.springframework.security.access.prepost.PreAuthorize"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.netflix.eureka.EnableEurekaClient"/>
@@ -60,4 +53,11 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.web.servlet.FilterRegistrationBean"/>
+    <fullyQualifiedTypeName name="org.apache.catalina.filters.CorsFilter"/>
+    <fullyQualifiedTypeName name="org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource"/>
+    <fullyQualifiedTypeName name="org.springframework.web.cors.CorsConfiguration"/>
+    <fullyQualifiedTypeName name="org.springframework.web.filter.CorsFilter"/>
+    <fullyQualifiedTypeName name="org.springframework.web.cors.UrlBasedCorsConfigurationSource"/>
 </qualifiedTypeNameHistroy>

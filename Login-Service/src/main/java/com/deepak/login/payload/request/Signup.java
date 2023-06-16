@@ -16,7 +16,7 @@ import lombok.Setter;
 public class Signup {
 
 	@NotBlank
-	@Size(min = 3, max = 20)
+ 	@Size(min = 3, max = 20, message = "Username Can not be More than 20 Words")
 	private String username;
 
 	@NotBlank
