@@ -52,7 +52,7 @@ public class AuthController {
 
 	@Autowired
 	JwtUtils jwtUtils;
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
 
 	// Handles the authentication request and generates a JWT token
@@ -79,6 +79,7 @@ public class AuthController {
 		// Constructs the response containing the JWT token, user details, and roles
 		return ResponseEntity.ok(
 				new JwtResponse(jwt, userDetails.getId(), userDetails.getUsername(), userDetails.getEmail(), roles));
+
 	}
 
 	// Handles the user registration request
