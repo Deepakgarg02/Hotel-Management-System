@@ -10678,3 +10678,10 @@ Caused by: java.lang.Exception: File not found: C:\Users\Asus\Desktop\Hotel-Mana
 2023-06-17 16:41:00,362 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-06-17 16:41:00,362 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2023-06-17 16:41:00,362 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Desktop\Hotel-Management-System\Login-Service\src\test\resources
+2023-06-17 22:35:11,618 [Worker-171: Launching Room-Microservices - RoomMicroservicesApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-17 22:35:11,619 [Worker-171: Launching Room-Microservices - RoomMicroservicesApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-06-17 22:35:11,639 [Worker-171: Launching Room-Microservices - RoomMicroservicesApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2023-06-17 22:35:11,791 [Worker-171: Launching Room-Microservices - RoomMicroservicesApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2023-06-17 22:35:11,801 [Worker-171: Launching Room-Microservices - RoomMicroservicesApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-06-17 22:35:11,801 [Worker-171: Launching Room-Microservices - RoomMicroservicesApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2023-06-17 22:35:11,802 [Worker-171: Launching Room-Microservices - RoomMicroservicesApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Desktop\Hotel-Management-System\Room-Microservices\src\test\resources
