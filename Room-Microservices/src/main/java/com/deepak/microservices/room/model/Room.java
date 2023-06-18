@@ -1,5 +1,6 @@
 package com.deepak.microservices.room.model;
 
+import javax.validation.constraints.DecimalMin;
 //import javax.persistence.Entity;
 //import javax.persistence.GeneratedValue;
 //import javax.persistence.GenerationType;
@@ -35,6 +36,7 @@ public class Room {
 	
 	@NotNull(message = "Room Price can not be Null")
 	@Positive
+    @DecimalMin(value = "1", inclusive = true, message = "Room Price must be greater than or equal to 1")
 	private double roomPrice;
 
 }
