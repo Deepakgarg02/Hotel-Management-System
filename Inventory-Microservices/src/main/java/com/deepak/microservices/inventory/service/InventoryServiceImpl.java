@@ -24,10 +24,17 @@ public class InventoryServiceImpl implements InventoryService {
 
 	@Override
 	public void addInventory(Inventory inventory) {
-		// TODO Auto-generated method stub
-		inventoryRepo.save(inventory);
-
+	    // Check if inventoryName is null or empty
+	    if (inventory.getInventoryName() == null || inventory.getInventoryName().isEmpty() 
+	    	|| inventory.getInventoryType() == null || inventory.getInventoryType().isEmpty()) {
+	        throw new IllegalArgumentException("Inventory Field cannot be null or empty");
+	    }else {
+	    
+	    // Save the inventory
+	    inventoryRepo.save(inventory);
+	    }
 	}
+
 
 	@Override
 	public void modifyInventoryById(String inventoryId, Inventory inventory) throws InventoryNotFoundException {

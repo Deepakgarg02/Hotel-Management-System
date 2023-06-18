@@ -1,11 +1,15 @@
 package com.deepak.microservices.inventory.model;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 //import javax.persistence.Entity;
 //import javax.persistence.GeneratedValue;
 //import javax.persistence.GenerationType;
 //import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -25,14 +29,17 @@ import lombok.ToString;
 public class Inventory {
 	
 	@Id
-	//@GeneratedValue(strategy = GenerationType.AUTO)
-	private String inventoryId;
+ 	private String inventoryId;
 	
-	@NotNull(message = "Name Cann't be Null")
-	private String inventoryName;
+	@NotNull(message ="Inventory Name can not be null")
+	@NotEmpty
+ 	private String inventoryName;
 	
-	private String inventoryType;
-	
+	@NotNull(message ="Inventory Type can not be null")
+ 	@NotEmpty
+ 	private String inventoryType;
+	 
+	@NotBlank
 	@Positive
 	private int inventoryStock;
 

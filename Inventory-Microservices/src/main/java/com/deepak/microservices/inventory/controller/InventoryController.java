@@ -3,7 +3,10 @@ package com.deepak.microservices.inventory.controller;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +24,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/inventory")
+@CrossOrigin(origins = "*")
 public class InventoryController {
 
 	@Autowired
@@ -37,9 +41,9 @@ public class InventoryController {
 	public String addInventory(@RequestBody Inventory inventory) {
 		try {
 			inventoryServiceImpl.addInventory(inventory);
-			return "Inventory Added with inventoryId " + inventory.getInventoryId();
+			return "Inventory Added";
 		} catch (Exception e) {
-			return "Use Proper Input";
+			return e.getMessage();
 		}
 	}
 
