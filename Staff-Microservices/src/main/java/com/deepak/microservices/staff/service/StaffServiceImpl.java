@@ -56,8 +56,14 @@ public class StaffServiceImpl implements StaffService {
 	@Override
 	public void addStaff(Staff staff) {
 		// TODO Auto-generated method stub
+	    // Check if inventoryName is null or empty
+	    if (staff.getStaffName() == null || staff.getStaffName().isEmpty() 
+	    	|| staff.getStaffAddress() == null || staff.getStaffAddress().isEmpty()
+	    	|| staff.getStaffEmail() == null || staff.getStaffEmail().isEmpty()) {
+	        throw new IllegalArgumentException("Fields can't be Null");
+	    }else {
 		staffRepo.save(staff);
-
+	    }
 	}
 
 	@Override

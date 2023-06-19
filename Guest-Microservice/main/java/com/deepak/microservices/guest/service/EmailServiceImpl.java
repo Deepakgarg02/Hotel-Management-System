@@ -35,6 +35,7 @@ public class EmailServiceImpl {
 				+ "Best regards,\r\n"
 				+ "\r\n"
 				+ "JWT Greetings\r\n"
+				+ "\r\n"
 				+ "JW Marriott Hotels";
 		String from = "jwmariothotels@gmail.com";
 

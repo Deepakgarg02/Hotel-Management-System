@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/guest")
+@CrossOrigin(origins = "*")
 public class GuestController {
 
 	@Autowired
@@ -37,7 +39,7 @@ public class GuestController {
 	public String addGuest(@RequestBody Guest guest) {
 		try {
 			guestServiceImpl.addGuest(guest);
-			return "Guest Added with guestId " + guest.getGuestId();
+			return "Guest Added";
 		} catch (Exception e) {
 			return "Use Proper Input";
 		}
