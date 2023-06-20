@@ -46,7 +46,7 @@ class ReservationMicroservicesApplicationTests {
 		Room room = new Room("111222334", "Deluxe", true, 200.0);
 		when(roomClient.getRoomById("111222334")).thenReturn(Optional.of(room));
 
-		Guest guest = new Guest("111222335", 1111111111, "Deepak", "sumit@gmail.com", "Male", "Kalayat", null);
+		Guest guest = new Guest("111222335", 1111111111, "Deepak", "sumit@gmail.com", "Male", "Kalayat");
 		when(guestClient.getGuestById("111222335")).thenReturn(Optional.of(guest));
 
 		when(reservationRepo.save(reservation)).thenReturn(reservation);
@@ -64,17 +64,13 @@ class ReservationMicroservicesApplicationTests {
 
 		when(reservationRepo.findById("111222333")).thenReturn(Optional.of(reservation));
 
-		Guest guest = new Guest("111222335", 1111111111, "Deepak", "sumit@gmail.com", "Male", "Kalayat", null);
+		Guest guest = new Guest("111222335", 1111111111, "Deepak", "sumit@gmail.com", "Male", "Kalayat");
 		when(guestClient.getGuestById("111222335")).thenReturn(Optional.of(guest));
-
-		Room room = new Room("111222334", "Deluxe", true, 200.0);
-		when(roomClient.getAllRooms()).thenReturn(List.of(room));
 
 		Optional<Reservation> result = reservationService.getReservationById("111222333");
 
 		assertEquals(reservation, result.get());
 		assertEquals(guest, result.get().getGuest());
-		assertEquals(List.of(room), result.get().getGuest().getRoom());
 	}
 
 	@Test

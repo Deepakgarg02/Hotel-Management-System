@@ -23,7 +23,5 @@ public class Guest {
 	private String guestGender;
 
 	private String guestAddress;
-	
-	private List<Room> room;
 
 }

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.deepak.login.model.Roles"/>
-    <fullyQualifiedTypeName name="com.deepak.login.service.UserDetailsImpl"/>
     <fullyQualifiedTypeName name="com.deepak.login.service.UserDetailsServiceImpl"/>
     <fullyQualifiedTypeName name="org.springframework.web.client.HttpClientErrorException.Forbidden"/>
     <fullyQualifiedTypeName name="org.springframework.core.annotation.Order"/>
@@ -59,5 +57,7 @@
     <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
     <fullyQualifiedTypeName name="javax.validation.constraints.NotEmpty"/>
     <fullyQualifiedTypeName name="javax.validation.Valid"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
 </qualifiedTypeNameHistroy>

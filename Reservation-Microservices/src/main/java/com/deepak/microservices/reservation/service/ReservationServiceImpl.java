@@ -1,5 +1,7 @@
 package com.deepak.microservices.reservation.service;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -41,6 +43,15 @@ public class ReservationServiceImpl implements ReservationService {
 
 	@Autowired
 	private GuestClient guestClient;
+	
+    public static String calculateDuration(String checkInDate, String checkOutDate) {
+        LocalDate startDate = LocalDate.parse(checkInDate);
+        LocalDate endDate = LocalDate.parse(checkOutDate);
+
+        long duration = ChronoUnit.DAYS.between(startDate, endDate);
+
+        return String.valueOf(duration);
+    }
 
 	@Override
 	public String addReservation(Reservation reservation) {
@@ -52,13 +63,26 @@ public class ReservationServiceImpl implements ReservationService {
 
 		Optional<Guest> g1 = guestClient.getGuestById(reservation.getGuestId());
 		Guest guest = g1.get();
+		
+		String d1 = calculateDuration(reservation.getCheckInDate(), reservation.getCheckOutDate());
+		double days = Double.parseDouble(d1);
 
-		if (room.isRoomAvail() || g1.isPresent()) {
+		logger.info("Available Room: {}", room.isRoomAvail());
+		logger.info("Available Guest: {}", g1.isPresent());
+		logger.info("Available Guest: {}", g1.isPresent() && room.isRoomAvail());
+		if (room.isRoomAvail() && g1.isPresent()) 
+		{
+			double roomPrice = room.getRoomPrice();
+			double totalPrice = roomPrice * days;
+			reservation.setTotalPrice(totalPrice);
 			reservationRepo.save(reservation);
 			room.setRoomAvail(false);
 			roomClient.modifyRoomById(room, reservation.getRoomId());
 			return "Room Id " + room.getRoomId() + " reserved for the Guest Id Number " + guest.getGuestId();
-		} else {
+		}
+		
+		else
+		{
 			return "Room is already Booked";
 		}
 	}
@@ -72,11 +96,6 @@ public class ReservationServiceImpl implements ReservationService {
 			Optional<Guest> g1 = guestClient.getGuestById(reservation.getGuestId());
 			Guest guest = g1.get();
 			reservation.setGuest(guest);
-
-//	        g1.ifPresent(reservation::setGuest);
-
-			List<Room> room = roomClient.getAllRooms();
-			guest.setRoom(room);
 		}
 
 		return reservations;
@@ -86,13 +105,18 @@ public class ReservationServiceImpl implements ReservationService {
 	public void modifyReservationById(Reservation reservation, String resId) throws InvalidReservationIdException {
 		// TODO Auto-generated method stub
 		Optional<Reservation> res = reservationRepo.findById(resId);
+		Optional<Room> r1 = roomClient.getRoomById(reservation.getRoomId());
+		Room room = r1.get();
 		if (res.isPresent()) {
 			Reservation reserve = res.get();
 			reserve.setCheckInDate(reservation.getCheckInDate());
 			reserve.setCheckOutDate(reservation.getCheckOutDate());
 			reserve.setNumOfGuest(reservation.getNumOfGuest());
-			reserve.setTotalPrice(reservation.getTotalPrice());
-
+			String d1 = calculateDuration(reserve.getCheckInDate(), reserve.getCheckOutDate());
+			double days = Double.parseDouble(d1);
+			double roomPrice = room.getRoomPrice();
+			double totalPrice = roomPrice * days;
+			reserve.setTotalPrice(totalPrice);
 			reservationRepo.save(reserve);
 		}
 
@@ -120,9 +144,6 @@ public class ReservationServiceImpl implements ReservationService {
 		Optional<Guest> g1 = guestClient.getGuestById(reservation.getGuestId());
 		Guest guest = g1.get();
 
-		List<Room> room = roomClient.getAllRooms();
-
-		guest.setRoom(room);
 		reservation.setGuest(guest);
 
 		return reservationRepo.findById(resId);
