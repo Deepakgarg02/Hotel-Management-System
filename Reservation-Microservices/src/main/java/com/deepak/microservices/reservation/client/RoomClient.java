@@ -6,11 +6,11 @@ import java.util.Optional;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.deepak.microservices.reservation.model.*;
-
 @FeignClient(name = "Room-Microservice")
 public interface RoomClient {
 
@@ -22,4 +22,7 @@ public interface RoomClient {
 
 	@GetMapping("/room/get")
 	public List<Room> getAllRooms();
+	
+	@PostMapping("room/add")
+	public String addRoom(@RequestBody Room room);
 }

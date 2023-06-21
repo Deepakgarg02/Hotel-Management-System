@@ -3,15 +3,15 @@ package com.deepak.microservices.reservation;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.deepak.microservices.reservation.client.GuestClient;
 import com.deepak.microservices.reservation.client.RoomClient;
@@ -22,7 +22,7 @@ import com.deepak.microservices.reservation.model.Room;
 import com.deepak.microservices.reservation.repository.ReservationRepo;
 import com.deepak.microservices.reservation.service.ReservationService;
 
-@ExtendWith(SpringExtension.class)
+@ExtendWith(MockitoExtension.class)
 @SpringBootTest
 class ReservationMicroservicesApplicationTests {
 
@@ -75,16 +75,22 @@ class ReservationMicroservicesApplicationTests {
 
 	@Test
 	public void modifyReservationByIdTest() throws InvalidReservationIdException {
-		Reservation existingReservation = new Reservation("111222333", "111222334", "111222335", "2021-05-10",
+		// Create the existing reservation
+		Reservation existingReservation = new Reservation("111222333", "roomId1", "111222335", "2021-05-10",
 				"2021-05-12", 2, 6000.0, null);
-		Reservation modifiedReservation = new Reservation("111222333", "111222334", "111222335", "2021-06-10",
+
+		// Create the modified reservation
+		Reservation modifiedReservation = new Reservation("111222333", "roomId1", "111222335", "2021-06-10",
 				"2021-06-12", 2, 7000.0, null);
 
-		when(reservationRepo.findById("111222333")).thenReturn(Optional.of(existingReservation));
-		when(reservationRepo.save(existingReservation)).thenReturn(existingReservation);
+		// Configure the mock repository to return the existing reservation
+		Mockito.when(reservationRepo.findById("111222333")).thenReturn(Optional.of(existingReservation));
+		Mockito.when(reservationRepo.save(existingReservation)).thenReturn(existingReservation);
 
+		// Perform the modification
 		reservationService.modifyReservationById(modifiedReservation, "111222333");
 
+		// Assert the modifications
 		assertEquals(modifiedReservation.getCheckInDate(), existingReservation.getCheckInDate());
 		assertEquals(modifiedReservation.getCheckOutDate(), existingReservation.getCheckOutDate());
 		assertEquals(modifiedReservation.getNumOfGuest(), existingReservation.getNumOfGuest());

@@ -107,16 +107,32 @@ public class ReservationServiceImpl implements ReservationService {
 		Optional<Reservation> res = reservationRepo.findById(resId);
 		Optional<Room> r1 = roomClient.getRoomById(reservation.getRoomId());
 		Room room = r1.get();
+		
 		if (res.isPresent()) {
 			Reservation reserve = res.get();
 			reserve.setCheckInDate(reservation.getCheckInDate());
 			reserve.setCheckOutDate(reservation.getCheckOutDate());
 			reserve.setNumOfGuest(reservation.getNumOfGuest());
+
+			if(room.isRoomAvail()) {
+				
+			String existingRoomId = reserve.getRoomId();
+		    Optional<Room> r2 = roomClient.getRoomById(existingRoomId);
+			Room existingRoom = r2.get();
+			existingRoom.setRoomAvail(true);
+			roomClient.modifyRoomById(existingRoom, existingRoomId);
+			room.setRoomAvail(false);
+			
+			roomClient.modifyRoomById(room, reservation.getRoomId());
+   			reserve.setRoomId(reservation.getRoomId());
+			}
+			
 			String d1 = calculateDuration(reserve.getCheckInDate(), reserve.getCheckOutDate());
 			double days = Double.parseDouble(d1);
 			double roomPrice = room.getRoomPrice();
 			double totalPrice = roomPrice * days;
 			reserve.setTotalPrice(totalPrice);
+			
 			reservationRepo.save(reserve);
 		}
 
@@ -153,7 +169,7 @@ public class ReservationServiceImpl implements ReservationService {
 	public TransactionDetails createTransaction(Double amount) {
 		try {
 			JSONObject jsonObject = new JSONObject();
-			jsonObject.put("amount", (amount * 100));
+			jsonObject.put("amount", (amount*100));
 			jsonObject.put("currency", CURRENCY);
 
 			RazorpayClient razorpayClient = new RazorpayClient(KEY, KEY_SECRET);
@@ -176,9 +192,10 @@ public class ReservationServiceImpl implements ReservationService {
 	private TransactionDetails prepareTransactionDetails(Order order) {
 		String orderId = order.get("id");
 		String currency = order.get("currency");
-		Integer amount = order.get("amount");
+		Integer amount = order.get("amount" );
+		String status = order.get("status");
 
-		TransactionDetails transactionDetails = new TransactionDetails(orderId, currency, amount);
+		TransactionDetails transactionDetails = new TransactionDetails(orderId, currency, amount, status);
 		return transactionDetails;
 	}
 

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.deepak.login.service.UserDetailsServiceImpl"/>
-    <fullyQualifiedTypeName name="org.springframework.web.client.HttpClientErrorException.Forbidden"/>
     <fullyQualifiedTypeName name="org.springframework.core.annotation.Order"/>
     <fullyQualifiedTypeName name="com.razorpay.RazorpayClient"/>
     <fullyQualifiedTypeName name="org.slf4j.Logger"/>
@@ -35,7 +33,6 @@
     <fullyQualifiedTypeName name="javax.mail.Transport"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="com.deepak.microservices.guest.service.EmailServiceImpl"/>
     <fullyQualifiedTypeName name="com.netflix.discovery.converters.Auto"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.mockito.junit.jupiter.MockitoExtension"/>
+    <fullyQualifiedTypeName name="org.mockito.Mockito"/>
 </qualifiedTypeNameHistroy>
