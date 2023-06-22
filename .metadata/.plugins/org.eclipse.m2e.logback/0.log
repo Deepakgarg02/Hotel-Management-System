@@ -11249,3 +11249,4 @@ Caused by: java.lang.Exception: File not found: C:\Users\Asus\Desktop\Hotel-Mana
 2023-06-21 20:44:47,373 [Worker-128: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2023-06-21 20:44:47,374 [Worker-128: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2023-06-21 20:44:47,374 [Worker-128: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Desktop\Hotel-Management-System\Reservation-Microservices\src\test\resources
+2023-06-22 10:45:12,148 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
