@@ -1,0 +1,48 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: Guest-Microservice
+          uri: lb://Guest-Microservice
+          predicates:
+            - Path=/guest/** , /email/**
+
+        - id: Inventory-Microservice
+          uri: lb://Inventory-Microservice
+          predicates:
+            - Path=/inventory/**
+
+        - id: Room-Microservice
+          uri: lb://Room-Microservice
+          predicates:
+            - Path=/room/**    
+            
+        - id: Staff-Microservice
+          uri: lb://Staff-Microservice
+          predicates:
+            - Path=/staff/**      
+
+        - id: Reservation-Service
+          uri: lb://Reservation-Service
+          predicates:
+            - Path=/reservation/**      
+            
+        - id: Login-Service
+          uri: lb://Login-Service
+          predicates:
+            - Path=/api/auth/**, /api/test/**
+            
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      
