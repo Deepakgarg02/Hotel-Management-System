@@ -17,76 +17,75 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailServiceImpl {
 
-	private static final Logger logger = LoggerFactory.getLogger(EmailServiceImpl.class);
+    private static final Logger logger = LoggerFactory.getLogger(EmailServiceImpl.class);
 
-	public boolean sendEmail(String to) {
+    private static final String SUBJECT = "Welcome to Our JW Marriott Hotels!";
+    private static final String MESSAGE = "Dear Guest,\r\n" + "\r\n"
+            + "Welcome to our hotel! We're thrilled to have you as part of our valued guest community.\r\n" + "\r\n"
+            + "At JW Marriott Hotels, we're committed to providing exceptional hospitality and ensuring your stay is unforgettable.\r\n"
+            + "\r\n"
+            + "As a member, you'll enjoy exclusive benefits and personalized services. Our dedicated team is here to cater to your every need.\r\n"
+            + "\r\n" + "Stay tuned for exciting updates, special offers, and promotions straight to your inbox.\r\n"
+            + "\r\n"
+            + "Thank you for choosing JW Marriott Hotels. We can't wait to provide you with an amazing stay.\r\n"
+            + "\r\n" + "Best regards,\r\n" + "\r\n" + "JWT Greetings\r\n" + "\r\n" + "JW Marriott Hotels";
+    private static final String FROM = "jwmariothotels@gmail.com";
 
-		boolean f = false;
+    public boolean sendEmail(String to) {
+        boolean f = false;
 
-		String subject = "Welcome to Our JW Marriott Hotels!";
-		String message = "Dear Guest,\r\n" + "\r\n"
-				+ "Welcome to our hotel! We're thrilled to have you as part of our valued guest community.\r\n" + "\r\n"
-				+ "At JW Marriott Hotels, we're committed to providing exceptional hospitality and ensuring your stay is unforgettable.\r\n"
-				+ "\r\n"
-				+ "As a member, you'll enjoy exclusive benefits and personalized services. Our dedicated team is here to cater to your every need.\r\n"
-				+ "\r\n" + "Stay tuned for exciting updates, special offers, and promotions straight to your inbox.\r\n"
-				+ "\r\n"
-				+ "Thank you for choosing JW Marriott Hotels. We can't wait to provide you with an amazing stay.\r\n"
-				+ "\r\n" + "Best regards,\r\n" + "\r\n" + "JWT Greetings\r\n" + "\r\n" + "JW Marriott Hotels";
-		String from = "jwmariothotels@gmail.com";
+        // Variable for email
+        String host = "smtp.gmail.com";
 
-		// Variable for email
-		String host = "smtp.gmail.com";
+        // get the system properties
+        Properties properties = System.getProperties();
 
-		// get the system properties
-		Properties properties = System.getProperties();
+        // Setting Important Information
+        // host set
+        properties.put("mail.smtp.host", host);
+        properties.put("mail.smtp.port", "465");
+        properties.put("mail.smtp.ssl.enable", "true");
+        properties.put("mail.smtp.auth", "true");
 
-		// Setting Important Information
-		// host set
+        // Step 1: Get Session Object
+        Session session = Session.getInstance(properties, new Authenticator() {
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication("jwmariothotels@gmail.com", "wbbcseycrhgywqyz");
+            }
+        });
 
-		properties.put("mail.smtp.host", host);
-		properties.put("mail.smtp.port", "465");
-		properties.put("mail.smtp.ssl.enable", "true");
-		properties.put("mail.smtp.auth", "true");
+        // Step 2: Compose the message
+        session.setDebug(true);
 
-		// Step 1: Get Session Object
-		Session session = Session.getInstance(properties, new Authenticator() {
+        MimeMessage m = new MimeMessage(session);
 
-			@Override
-			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("jwmariothotels@gmail.com", "wbbcseycrhgywqyz");
-			}
+        try {
+            // from email
+            m.setFrom(FROM);
 
-		});
+            // adding subject to message
+            m.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
-		// Step 2 : Compose the message
-		session.setDebug(true);
+            // adding subject to message
+            m.setSubject(SUBJECT);
 
-		MimeMessage m = new MimeMessage(session);
+            // adding text to message
+            m.setText(MESSAGE);
 
-		try {
-			// from email
-			m.setFrom(from);
+            // send
 
-			// adding subject to message
-			m.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+            // Step 3: Send the message using Transport class
+            try (Transport transport = session.getTransport()) {
+                transport.connect();
+                transport.sendMessage(m, m.getAllRecipients());
+            }
 
-			// adding subject to message
-			m.setSubject(subject);
-
-			// adding text to message
-			m.setText(message);
-
-			// send
-
-			// step 3: send the message using Transport class
-			Transport.send(m);
-			logger.info("Sent Success.............................");
-			f = true;
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return f;
-	}
+            logger.info("Sent Success.............................");
+            f = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return f;
+    }
 }
