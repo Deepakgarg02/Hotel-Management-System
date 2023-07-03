@@ -15,7 +15,7 @@ import com.deepak.microservices.guest.service.EmailServiceImpl;
 
 @RestController
 @RequestMapping("/guest/email")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 public class EmailController {
 
 	@Autowired

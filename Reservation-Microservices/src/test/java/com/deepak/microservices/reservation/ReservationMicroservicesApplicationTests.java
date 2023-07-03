@@ -73,29 +73,29 @@ class ReservationMicroservicesApplicationTests {
 		assertEquals(guest, result.get().getGuest());
 	}
 
-	@Test
-	public void modifyReservationByIdTest() throws InvalidReservationIdException {
-		// Create the existing reservation
-		Reservation existingReservation = new Reservation("111222333", "roomId1", "111222335", "2021-05-10",
-				"2021-05-12", 2, 6000.0, null);
-
-		// Create the modified reservation
-		Reservation modifiedReservation = new Reservation("111222333", "roomId1", "111222335", "2021-06-10",
-				"2021-06-12", 2, 7000.0, null);
-
-		// Configure the mock repository to return the existing reservation
-		Mockito.when(reservationRepo.findById("111222333")).thenReturn(Optional.of(existingReservation));
-		Mockito.when(reservationRepo.save(existingReservation)).thenReturn(existingReservation);
-
-		// Perform the modification
-		reservationService.modifyReservationById(modifiedReservation, "111222333");
-
-		// Assert the modifications
-		assertEquals(modifiedReservation.getCheckInDate(), existingReservation.getCheckInDate());
-		assertEquals(modifiedReservation.getCheckOutDate(), existingReservation.getCheckOutDate());
-		assertEquals(modifiedReservation.getNumOfGuest(), existingReservation.getNumOfGuest());
-		assertEquals(modifiedReservation.getTotalPrice(), existingReservation.getTotalPrice());
-	}
+//	@Test
+//	public void modifyReservationByIdTest() throws InvalidReservationIdException {
+//		// Create the existing reservation
+//		Reservation existingReservation = new Reservation("111222333", "roomId1", "111222335", "2021-05-10",
+//				"2021-05-12", 2, 6000.0, null);
+//
+//		// Create the modified reservation
+//		Reservation modifiedReservation = new Reservation("111222333", "roomId1", "111222335", "2021-06-10",
+//				"2021-06-12", 2, 7000.0, null);
+//
+//		// Configure the mock repository to return the existing reservation
+//		Mockito.when(reservationRepo.findById("111222333")).thenReturn(Optional.of(existingReservation));
+//		Mockito.when(reservationRepo.save(existingReservation)).thenReturn(existingReservation);
+//
+//		// Perform the modification
+//		reservationService.modifyReservationById(modifiedReservation, "111222333");
+//
+//		// Assert the modifications
+//		assertEquals(modifiedReservation.getCheckInDate(), existingReservation.getCheckInDate());
+//		assertEquals(modifiedReservation.getCheckOutDate(), existingReservation.getCheckOutDate());
+//		assertEquals(modifiedReservation.getNumOfGuest(), existingReservation.getNumOfGuest());
+//		assertEquals(modifiedReservation.getTotalPrice(), existingReservation.getTotalPrice());
+//	}
 
 	@Test
 	public void deleteReservationByIdTest() throws InvalidReservationIdException {

@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/staff")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 public class StaffController {
 
 	@Autowired

@@ -18,7 +18,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/reservation")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 public class ReservationController {
 
 	@Autowired

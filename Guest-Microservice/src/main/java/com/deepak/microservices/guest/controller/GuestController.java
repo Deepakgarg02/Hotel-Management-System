@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/guest")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 public class GuestController {
 
 	@Autowired
@@ -39,7 +39,7 @@ public class GuestController {
 	public String addGuest(@RequestBody Guest guest) {
 		try {
 			guestServiceImpl.addGuest(guest);
-			return "Guest Added";
+			return guest.getGuestId();
 		} catch (Exception e) {
 			return "Use Proper Input";
 		}
