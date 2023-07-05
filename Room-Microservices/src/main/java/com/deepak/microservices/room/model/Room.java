@@ -38,5 +38,22 @@ public class Room {
 	@Positive
     @DecimalMin(value = "1", inclusive = true, message = "Room Price must be greater than or equal to 1")
 	private double roomPrice;
+	
+	public void setRoomId() {
+		String randomId = generateRandomId();
+		this.roomId = randomId;
+	}
+	
+	private String generateRandomId() {
+		StringBuilder sb = new StringBuilder();
+		int idLength = 3;
+		String characters = "0123456789";
+		for (int i = 0; i < idLength; i++) {
+			int randomIndex = (int) (Math.random() * characters.length());
+			char randomChar = characters.charAt(randomIndex);
+			sb.append(randomChar);
+		}
+		return sb.toString();
+	}
 
 }

@@ -3057,3 +3057,242 @@ java.lang.Exception: Resource '/ApiGateway/src/main/resources/META-INF' is not l
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-02 23:12:06.464
 !MESSAGE Classpath changed for project: Guest-Microservice
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 2 0 2023-07-03 13:57:53.291
+!MESSAGE Error while counting resources for P/Reservation-Microservices
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 2 0 2023-07-03 13:57:53.309
+!MESSAGE Removed misconfigured rule: LoosePackageCoupling cause: No packages or classes specified
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:53.315
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:53.316
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 2 0 2023-07-03 13:57:53.778
+!MESSAGE There were configuration errors!
+LoosePackageCoupling: No packages or classes specified
+
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:53.780
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:53.780
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:54.200
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:54.200
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:54.497
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:54.497
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:54.764
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:54.764
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:55.154
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:55.154
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:55.433
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:55.433
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:55.690
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:55.690
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:55.953
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:55.953
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:56.209
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:56.209
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:56.479
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:56.480
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:56.748
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:56.749
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:57.014
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:57.014
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 2 0 2023-07-03 13:57:57.314
+!MESSAGE Removed misconfigured rule: LoosePackageCoupling cause: No packages or classes specified
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:57.315
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:57:57.315
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 2 0 2023-07-03 13:57:57.593
+!MESSAGE There were configuration errors!
+LoosePackageCoupling: No packages or classes specified
+
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-03 13:58:57.214
+!MESSAGE Classpath changed for project: Reservation-Microservices
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 2 0 2023-07-03 13:59:05.555
+!MESSAGE Error while counting resources for P/Reservation-Microservices
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 2 0 2023-07-03 13:59:05.609
+!MESSAGE Removed misconfigured rule: LoosePackageCoupling cause: No packages or classes specified
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:05.617
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:05.618
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 2 0 2023-07-03 13:59:06.625
+!MESSAGE There were configuration errors!
+LoosePackageCoupling: No packages or classes specified
+
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:06.628
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:06.628
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:07.256
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:07.256
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:07.911
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:07.912
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:08.381
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:08.381
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:08.995
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:08.996
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:09.309
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:09.309
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:09.585
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:09.585
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:09.853
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:09.853
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:10.101
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:10.101
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:10.382
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:10.382
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:10.660
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:10.661
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:10.925
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:10.925
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 2 0 2023-07-03 13:59:11.213
+!MESSAGE Removed misconfigured rule: LoosePackageCoupling cause: No packages or classes specified
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:11.214
+!MESSAGE Exception while initializing Apexlink (Could not initialize class com.nawforce.common.types.other.ComponentDeclaration$)
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 4 0 2023-07-03 13:59:11.214
+!MESSAGE PMD will not attempt to initialize Apexlink further, this can cause rules like UnusedMethod to be dysfunctional
+
+!ENTRY net.sourceforge.pmd.eclipse.plugin 2 0 2023-07-03 13:59:11.489
+!MESSAGE There were configuration errors!
+LoosePackageCoupling: No packages or classes specified
+
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-03 13:59:43.316
+!MESSAGE Classpath changed for project: Reservation-Microservices
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-05 11:51:03.371
+!MESSAGE Classpath changed for project: Reservation-Microservices
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-05 11:52:20.924
+!MESSAGE Classpath changed for project: Reservation-Microservices
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-05 11:53:59.756
+!MESSAGE Classpath changed for project: Reservation-Microservices
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-05 11:59:43.792
+!MESSAGE Classpath changed for project: Staff-Microservices
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-05 12:00:30.666
+!MESSAGE Classpath changed for project: Staff-Microservices
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-05 12:16:15.882
+!MESSAGE Classpath changed for project: Staff-Microservices
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-05 12:18:11.206
+!MESSAGE Classpath changed for project: Room-Microservices
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-05 12:20:57.310
+!MESSAGE Classpath changed for project: Room-Microservices
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-07-05 12:22:23.651
+!MESSAGE Classpath changed for project: Room-Microservices

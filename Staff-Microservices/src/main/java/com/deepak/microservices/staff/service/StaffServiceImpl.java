@@ -40,6 +40,7 @@ public class StaffServiceImpl implements StaffService {
 			// Update the necessary fields of the existing staff record
 			existingStaff.setStaffName(staff.getStaffName());
 			existingStaff.setStaffAge(staff.getStaffAge());
+			existingStaff.setStaffRole(staff.getStaffRole());
 			existingStaff.setStaffAddress(staff.getStaffAddress());
 			existingStaff.setStaffSalary(staff.getStaffSalary());
 			existingStaff.setStaffEmail(staff.getStaffEmail());

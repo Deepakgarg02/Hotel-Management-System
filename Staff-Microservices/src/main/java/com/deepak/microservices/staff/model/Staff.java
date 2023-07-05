@@ -38,6 +38,9 @@ public class Staff {
 	@NotNull(message = "Staff Address cannnot be Null")
 	@Size(min = 5, message = "Staff Address should be minimum of 5 digits")
 	private String staffAddress;
+	
+	@NotNull(message = "Staff Role cannnot be Null")
+	private String staffRole;
 
 	@NotNull(message = "Staff Salary Can not be Null")
 	private double staffSalary;

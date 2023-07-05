@@ -57,7 +57,8 @@ public class ReservationServiceImpl implements ReservationService {
 	public String addReservation(Reservation reservation) {
 		// TODO Auto-generated method stub
 		String randomReservationId = UUID.randomUUID().toString();
-		reservation.setReservationId(randomReservationId);
+		String eightDigitId = randomReservationId.substring(0, 20);
+		reservation.setReservationId(eightDigitId);
 		Optional<Room> r1 = roomClient.getRoomById(reservation.getRoomId());
 		Room room = r1.get();
 
@@ -174,7 +175,7 @@ public class ReservationServiceImpl implements ReservationService {
 
 			RazorpayClient razorpayClient = new RazorpayClient(KEY, KEY_SECRET);
 			Order order = razorpayClient.orders.create(jsonObject);
-			logger.info("Order Details: {}", order);
+//			logger.info("Order Details: {}", order);
 
 			return prepareTransactionDetails(order);
 			// {"amount":100000,"amount_paid":0,"notes":[],"created_at":1686671711,

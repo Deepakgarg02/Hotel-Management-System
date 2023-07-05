@@ -35,8 +35,8 @@ class StaffMicroservicesApplicationTests {
 	@Test
     public void getAllStaffsTest() {
 	 when(staffRepo.findAll()).thenReturn(Stream
-			 .of(new Staff("1234567", "Deepak", "Kalayat", 15000.0, 25, "dgargkyt@gmail.com"),
-			 new Staff("1234567", "Sumit", "Kaithal", 15000.0, 25, "sumit@gmail.com"))
+			 .of(new Staff("1234567", "Deepak", "Kalayat", "Manager", 15000.0, 25, "dgargkyt@gmail.com"),
+			 new Staff("1234567", "Sumit", "Kaithal", "Manager", 15000.0, 25, "sumit@gmail.com"))
 			 .collect(Collectors.toList()));	 
 	 
 	 List<Staff> staff = staffService.getAllStaffs();
@@ -45,7 +45,7 @@ class StaffMicroservicesApplicationTests {
 
 	@Test
 	public void addStaffTest() {
-		Staff staff = new Staff("1234567", "Deepak", "Kalayat", 15000.0, 25, "dgargkyt@gmail.com");
+		Staff staff = new Staff("1234567", "Deepak", "Kalayat","Manager", 15000.0, 25, "dgargkyt@gmail.com");
 		staffService.addStaff(staff);
 		verify(staffRepo, times(1)).save(staff);
 	}
@@ -74,10 +74,10 @@ class StaffMicroservicesApplicationTests {
 	@Test
 	public void modifyStaffByIdTest() throws StaffNotFoundException {
 		// Create a Staff object with updated values
-		Staff updatedStaff = new Staff("1234568", "Updated", "Updated", 15000.0, 50, "dgargkyt@gmail.com");
+		Staff updatedStaff = new Staff("1234568", "Updated", "Updated","Updated", 15000.0, 50, "dgargkyt@gmail.com");
 
 		// Mock the existing Staff record
-		Staff existingStaff = new Staff("1234568", "Deepak", "Kalayat", 15000.0, 25, "dgargkyt@gmail.com");
+		Staff existingStaff = new Staff("1234568", "Deepak", "Kalayat","Manager", 15000.0, 25, "dgargkyt@gmail.com");
 		Optional<Staff> existingStaffOptional = Optional.of(existingStaff);
 		when(staffRepo.findById("1234568")).thenReturn(existingStaffOptional);
 
